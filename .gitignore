@@ -1,0 +1,13 @@
+# WebStorm / JetBrains IDE config
+.idea/
+*.iml
+
+# MacOS (si usás Mac)
+.DS_Store
+
+# Node (si en algún momento añadís npm o SASS)
+node_modules/
+dist/
+
+# Logs
+*.log
