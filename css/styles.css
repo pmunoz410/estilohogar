@@ -14,7 +14,7 @@ body {
 /* Globales */
 h1, h2, h3 {
     font-family: "Playfair Display", serif;
-    margin: 2rem 0;
+    margin: 0 0 4rem 0;
 }
 h1 {
     font-size: 4rem;
@@ -45,14 +45,20 @@ img {
     font-weight: 900;
     padding: 1rem;
     transition: background-color 0.3s ease-out;
+    text-align: center;
+    border: none;
 }
 .btn:hover {
     background-color: #769C02;
+    cursor: pointer;
 }
 
 /*Utilidades*/
 .text-center {
     text-align: center;
+}
+.max-width-30 {
+    max-width: 30rem;
 }
 
 /* Header y Navegacion */
@@ -104,7 +110,7 @@ img {
     padding: 10rem 0;
     margin-top: 5rem;
     background-repeat: no-repeat;
-    /*background-size: 100%, 100rem;*/
+    background-size: 100%, 100rem;
     background-position: left center;
 }
 .sobre-nosotros-flex {
@@ -191,4 +197,99 @@ img {
 .copyright {
     text-align: center;
     margin-top: 4rem;
+}
+
+/* Nosotros */
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
+    column-gap: 4rem;
+    margin-top: 4rem;
+}
+.informacion-nosotros p {
+    margin-top: 0;
+}
+
+/* Blog */
+.contenido-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+.entrada {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type {
+    border: none;
+    padding-bottom: 0;
+}
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.entrada-meta span {
+    color: #0075b8;
+}
+
+/* Entrada */
+.contenido-entrada-blog {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+/* Galería */
+.galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.galeria img {
+    height: 30rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/* Formulario */
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.formulario fieldset {
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.campo label {
+    flex-basis: 10rem;
+}
+.campo textarea {
+    resize: none;
+    height: 20rem;
+}
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select {
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
 }
